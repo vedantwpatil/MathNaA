@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+\begin{document}
+
+\section*{Notes on Double Integrals over Rectangular Regions}
+
+Double integrals are a way to integrate over a two-dimensional area. When dealing with rectangular regions, the process becomes more straightforward. Here are some key points to consider:
+
+\subsection*{Definition}
+A double integral over a rectangular region can be defined as:
+\[
+\iint_R f(x, y) \, dA
+\]
+where \( R \) is the rectangular region defined by \( a \leq x \leq b \) and \( c \leq y \leq d \). The function \( f(x, y) \) represents the integrand, and \( dA \) represents the differential area element, which can be expressed as \( dx \, dy \) or \( dy \, dx \).
+
+\subsection*{Iterated Integrals}
+The double integral over a rectangular region can be computed as an iterated integral. This means that the double integral can be broken down into two single integrals, one nested inside the other. The order of integration can be chosen based on convenience or the nature of the integrand:
+\[
+\iint_R f(x, y) \, dA = \int_a^b \left( \int_c^d f(x, y) \, dy \right) dx
+\]
+or equivalently,
+\[
+\iint_R f(x, y) \, dA = \int_c^d \left( \int_a^b f(x, y) \, dx \right) dy
+\]
+In the first form, we integrate with respect to \( y \) first, treating \( x \) as a constant, and then integrate the resulting expression with respect to \( x \). In the second form, we integrate with respect to \( x \) first, treating \( y \) as a constant, and then integrate the resulting expression with respect to \( y \).
+
+\subsection*{Symmetry in Integrals}
+If the integrand \( f(x, y) \) is symmetric, such as \( f(x, y) = f(y, x) \), it can simplify the integration process. For example, if \( f(x, y) = x^2 + y^2 \), the integral can be split and solved more easily.
+
+\subsection*{Visual Representation}
+\begin{center}
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (4,2);
+\draw[->] (-0.5,0) -- (4.5,0) node[right] {$x$};
+\draw[->] (0,-0.5) -- (0,2.5) node[above] {$y$};
+\draw[dashed] (0,2) -- (4,2);
+\draw[dashed] (4,0) -- (4,2);
+\node at (2,-0.3) {$a \leq x \leq b$};
+\node at (-0.3,1) {$c \leq y \leq d$};
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Steps to Evaluate}
+\begin{enumerate}
+    \item \textbf{Set up the integral}: Determine the limits of integration for both \( x \) and \( y \). These limits define the rectangular region \( R \).
+    \item \textbf{Integrate with respect to \( y \)}: Treat \( x \) as a constant and integrate the inner integral with respect to \( y \). This step reduces the double integral to a single integral in terms of \( x \).
+    \item \textbf{Integrate with respect to \( x \)}: Integrate the resulting expression from the previous step with respect to \( x \). This final step gives the value of the double integral.
+\end{enumerate}
+
+\subsection*{Example}
+Evaluate the double integral of \( f(x, y) = xy \) over the rectangular region \( 0 \leq x \leq 1 \) and \( 0 \leq y \leq 2 \).
+
+\[
+\iint_R xy \, dA = \int_0^1 \left( \int_0^2 xy \, dy \right) dx
+\]
+
+First, integrate with respect to \( y \):
+\[
+\int_0^2 xy \, dy = x \int_0^2 y \, dy = x \left[ \frac{y^2}{2} \right]_0^2 = x \left( \frac{4}{2} - 0 \right) = 2x
+\]
+
+Next, integrate with respect to \( x \):
+\[
+\int_0^1 2x \, dx = 2 \int_0^1 x \, dx = 2 \left[ \frac{x^2}{2} \right]_0^1 = 2 \left( \frac{1}{2} - 0 \right) = 1
+\]
+
+Thus, the value of the double integral is 1.
+
+\subsection*{Additional Examples}
+
+\subsubsection*{Example 1: Constant Function}
+Evaluate the double integral of \( f(x, y) = 1 \) over the rectangular region \( 1 \leq x \leq 3 \) and \( 2 \leq y \leq 4 \).
+
+\[
+\iint_R 1 \, dA = \int_1^3 \left( \int_2^4 1 \, dy \right) dx
+\]
+
+First, integrate with respect to \( y \):
+\[
+\int_2^4 1 \, dy = \left[ y \right]_2^4 = 4 - 2 = 2
+\]
+
+Next, integrate with respect to \( x \):
+\[
+\int_1^3 2 \, dx = 2 \int_1^3 1 \, dx = 2 \left[ x \right]_1^3 = 2(3 - 1) = 4
+\]
+
+Thus, the value of the double integral is 4.
+
+\subsubsection*{Example 2: Symmetric Function}
+Evaluate the double integral of \( f(x, y) = x^2 + y^2 \) over the rectangular region \( -1 \leq x \leq 1 \) and \( -1 \leq y \leq 1 \).
+
+\[
+\iint_R (x^2 + y^2) \, dA = \int_{-1}^1 \left( \int_{-1}^1 (x^2 + y^2) \, dy \right) dx
+\]
+
+First, integrate with respect to \( y \):
+\[
+\int_{-1}^1 (x^2 + y^2) \, dy = x^2 \int_{-1}^1 1 \, dy + \int_{-1}^1 y^2 \, dy = x^2 \left[ y \right]_{-1}^1 + \left[ \frac{y^3}{3} \right]_{-1}^1 = 2x^2 + \frac{2}{3}
+\]
+
+Next, integrate with respect to \( x \):
+\[
+\int_{-1}^1 \left( 2x^2 + \frac{2}{3} \right) \, dx = 2 \int_{-1}^1 x^2 \, dx + \frac{2}{3} \int_{-1}^1 1 \, dx = 2 \left[ \frac{x^3}{3} \right]_{-1}^1 + \frac{2}{3} \left[ x \right]_{-1}^1 = \frac{4}{3} + \frac{4}{3} = \frac{8}{3}
+\]
+
+Thus, the value of the double integral is \(\frac{8}{3}\).
+
+\subsection*{Applications}
+Double integrals over rectangular regions are used in various fields such as physics, engineering, and probability. They can be used to compute areas, volumes, and other quantities that depend on two variables. For example, in physics, double integrals can be used to find the mass of a lamina with a given density function. In probability, they can be used to find the probability of events in a two-dimensional random variable space.
+
+\end{document}

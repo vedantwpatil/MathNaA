@@ -1,0 +1,132 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Convergence and Divergence Tests}
+
+In mathematical analysis, determining whether a series converges or diverges is crucial. Here are some common tests used to analyze the absolute convergence and divergence of series.
+
+\subsection*{Comparison Test}
+The comparison test involves comparing the given series to a known benchmark series. If the absolute value of the terms of the given series is less than or equal to the terms of a known convergent series, then the given series converges absolutely. Conversely, if the terms are greater than or equal to a known divergent series, then the given series diverges.
+
+\paragraph{Example}
+Consider the series:
+\[
+\sum_{n=1}^\infty \frac{1}{n^2 + 1}
+\]
+We can compare this series to the convergent series \(\sum_{n=1}^\infty \frac{1}{n^2}\). Since \(\frac{1}{n^2 + 1} < \frac{1}{n^2}\) for all \(n \geq 1\), and \(\sum_{n=1}^\infty \frac{1}{n^2}\) converges, by the comparison test, \(\sum_{n=1}^\infty \frac{1}{n^2 + 1}\) also converges absolutely.
+
+\subsection*{Limit Comparison Test}
+The limit comparison test involves taking the limit of the ratio of the terms of two series. For series \(\sum a_n\) and \(\sum b_n\), if:
+\[
+\lim_{n \to \infty} \frac{a_n}{b_n} = c
+\]
+where \(c\) is a positive finite number, then both series either converge or diverge together.
+
+\paragraph{Example}
+Consider the series:
+\[
+\sum_{n=1}^\infty \frac{2n^2 + 3}{n^3 + 1}
+\]
+Compare it to \(\sum_{n=1}^\infty \frac{1}{n}\):
+\[
+\lim_{n \to \infty} \frac{\frac{2n^2 + 3}{n^3 + 1}}{\frac{1}{n}} = \lim_{n \to \infty} \frac{2n^3 + 3n}{n^3 + 1} = 2
+\]
+Since the limit is a positive finite number, both series either converge or diverge together. Since \(\sum_{n=1}^\infty \frac{1}{n}\) diverges, the given series also diverges.
+
+\subsection*{Ratio Test}
+The ratio test involves taking the limit of the absolute value of the ratio of consecutive terms. For a series \(\sum a_n\), we compute:
+\[
+\lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right|
+\]
+- If the limit is less than 1, the series converges absolutely.
+- If the limit is greater than 1, the series diverges.
+- If the limit equals 1, the test is inconclusive.
+
+\paragraph{Example}
+Consider the series:
+\[
+\sum_{n=1}^\infty \frac{n!}{2^n}
+\]
+We apply the ratio test:
+\[
+\lim_{n \to \infty} \left| \frac{(n+1)! / 2^{n+1}}{n! / 2^n} \right| = \lim_{n \to \infty} \left| \frac{(n+1)}{2} \right| = \infty
+\]
+Since the limit is greater than 1, the series diverges.
+
+\subsection*{Root Test}
+The root test involves taking the limit of the nth root of the absolute value of the terms. For a series \(\sum a_n\), we compute:
+\[
+\lim_{n \to \infty} \sqrt[n]{|a_n|}
+\]
+- If the limit is less than 1, the series converges absolutely.
+- If the limit is greater than 1, the series diverges.
+- If the limit equals 1, the test is inconclusive.
+
+\paragraph{Example}
+Consider the series:
+\[
+\sum_{n=1}^\infty \left( \frac{1}{n} \right)^n
+\]
+We apply the root test:
+\[
+\lim_{n \to \infty} \sqrt[n]{\left( \frac{1}{n} \right)^n} = \lim_{n \to \infty} \frac{1}{n} = 0
+\]
+Since the limit is less than 1, the series converges absolutely.
+
+\subsection*{Alternating Series Test}
+For an alternating series \(\sum (-1)^n a_n\), if the terms \(a_n\) are positive, decreasing, and approach zero, the series converges. To test for absolute convergence, we apply one of the above tests to the series \(\sum |a_n|\).
+
+\paragraph{Example}
+Consider the series:
+\[
+\sum_{n=1}^\infty \frac{(-1)^n}{n}
+\]
+The terms \(\frac{1}{n}\) are positive, decreasing, and approach zero. Therefore, by the alternating series test, the series converges. To test for absolute convergence, we consider the series \(\sum_{n=1}^\infty \frac{1}{n}\), which diverges. Hence, the original series converges conditionally but not absolutely.
+
+\subsection*{Ratio Test for Absolute Convergence}
+The ratio test can also be used to test for absolute convergence. If the limit of the ratio of consecutive terms is less than 1, the series converges absolutely.
+
+\subsection*{Divergence Test}
+If the limit of the terms of a series \(\sum a_n\) does not approach zero, the series diverges.
+
+\paragraph{Example}
+Consider the series:
+\[
+\sum_{n=1}^\infty \frac{n}{n+1}
+\]
+Since \(\lim_{n \to \infty} \frac{n}{n+1} = 1 \neq 0\), the series diverges.
+
+\subsection*{Integral Test}
+The integral test can be used if the terms of the series are positive and decreasing. It involves integrating the function corresponding to the terms of the series. If the integral converges, then the series converges absolutely.
+
+\paragraph{Example}
+Consider the series:
+\[
+\sum_{n=1}^\infty \frac{1}{n^p}
+\]
+We apply the integral test by evaluating the integral:
+\[
+\int_1^\infty \frac{1}{x^p} \, dx
+\]
+- If \(p > 1\), the integral converges, and so does the series absolutely.
+- If \(p \leq 1\), the integral diverges, and so does the series.
+
+\subsection*{P-Series Test}
+A p-series is of the form \(\sum_{n=1}^\infty \frac{1}{n^p}\). The series converges if \(p > 1\) and diverges if \(p \leq 1\).
+
+\paragraph{Example}
+Consider the series:
+\[
+\sum_{n=1}^\infty \frac{1}{n^2}
+\]
+Since \(p = 2 > 1\), the series converges.
+
+\subsection*{Absolute Convergence}
+Consider the series:
+\[
+\sum_{n=1}^\infty \frac{1}{n^2}
+\]
+To check if the series converges absolutely, we have to check the absolute value of the terms. Since \(\frac{1}{n^2}\) is decreasing and approaches zero, the series converges absolutely.    
+\end{document}

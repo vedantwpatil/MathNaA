@@ -1,0 +1,56 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+
+\newcounter{keyconcept}
+\newcommand{\keyconcept}[1]{%
+  \refstepcounter{keyconcept}%
+  \par\noindent\textbf{Key Concept \thekeyconcept:} #1\par
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Course Name}
+\lhead{Your Name}
+\cfoot{\thepage}
+
+\title{Lecture Notes: Topic}
+\author{Your Name}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+\begin{tcolorbox}[colback=yellow!10!white,colframe=yellow!50!black,title=Key Points]
+  \begin{itemize}
+    \item Key point 1
+    \item Key point 2
+  \end{itemize}
+\end{tcolorbox}
+
+\section{Section 1}
+Content for Section 1
+
+\section{Section 2} 
+Content for Section 2
+% Use \keyconcept{Your concept here} to add key concepts
+% Use \begin{theorem} ... \end{theorem} for theorems
+% Use \begin{definition} ... \end{definition} for definitions
+\section{Additional Notes}
+% Add more sections here as needed during the lecture
+
+\section{Questions and Further Study}
+\begin{itemize}
+  \item Question or topic for further study
+\end{itemize}
+
+\end{document}

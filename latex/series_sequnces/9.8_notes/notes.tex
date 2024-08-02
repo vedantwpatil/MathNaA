@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\title{Math 123 - Notes for Section 9.8}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Overview}
+We covered the first half of Section 9.8 in class last week where we defined Maclaurin and Taylor series for functions and looked at a few examples. As I mentioned in class, there are two issues that we need to address. The first is to figure out for which values of $x$ does a Taylor or Maclaurin series converge. Remember, Taylor and Maclaurin series are functions of $x$. If we plug in a value for $x$ then we get a regular series which may or may not converge. So the question is, "given a Maclaurin or Taylor series, for which real numbers $x$, if we plug into the series, will it converge, and for which real numbers $x$, if we plug into the series, will it diverge?" This issue is the focus of the remainder of Section 9.8. The second issue is to figure out, given a Maclaurin or Taylor series for a function $f$, if we know the series converges for some real number $x$, does it converge to $f(x)$? For example, we saw the Maclaurin series for $e^x$ last week. Let's say we figure out somehow that the series converges for $x = 5$. Does it converge to $e^5$? This is the issue covered in Section 9.9. We don't actually have much to talk about here as the answer relies heavily on the Remainder Estimation Theorem which we've already discussed and used. Let's now address the first issue by looking at the second half of Section 9.8. We will have to wait until after the midterm to discuss the second issue addressed in Section 9.9.
+
+\section*{Section 9.8 - Continued}
+Recall at the end of class on Thursday we defined power series, which are series of the form
+\[
+\sum_{k=0}^{\infty} c_k (x - x_0)^k
+\]
+where $c_k$ is a constant real number and $x_0$ is a fixed real number called the center. Maclaurin and Taylor series are a particular type of power series so we can use theorems about power series on Maclaurin and Taylor series. Theorem 9.8.3 from the textbook gives us a good starting point for figuring out for which values of $x$ does a power series converge.
+
+\subsection*{Theorem 9.8.3}
+For a power series $\sum_{k=0}^{\infty} c_k (x - x_0)^k$, exactly one of the following statements is true:
+\begin{itemize}
+    \item[(a)] The series converges only for $x = x_0$.
+    \item[(b)] The series converges absolutely for all real numbers $x$.
+    \item[(c)] There exists a positive real number $R$ such that the series converges absolutely for all real numbers $x$ in the interval $(x_0 - R, x_0 + R)$, diverges for all real numbers $x$ such that $x < x_0 - R$, and diverges for all real numbers $x$ such that $x > x_0 + R$. The series may converge absolutely, converge conditionally, or diverge at the points $x = x_0 - R$ and $x = x_0 + R$.
+\end{itemize}
+
+This theorem tells us that, given a power series centered at $x_0$, if we look at the set of all $x$'s for which the series converges then it must be one of the following forms: In part (a), it's of the form $\{x_0\}$, in part (b) it's of the form $(-\infty, \infty)$, and in part (c), it's of the form $(x_0 - R, x_0 + R)$, $[x_0 - R, x_0 + R)$, $(x_0 - R, x_0 + R]$, or $[x_0 - R, x_0 + R]$. For a given power series, we call the set of all $x$'s for which the series converges the \textit{interval of convergence}. One thing to note then, which justifies the use of the word "interval" in the definition, is that it is not possible for a power series to have an interval of convergence which is not an interval (if we allow for sets with one element $\{x_0\}$ to equal the interval $[x_0, x_0]$). It is also not possible for the interval of convergence to be something like $(5, \infty)$ or $(-\infty, 9]$, for example.
+
+Also, for part (c), we call $R$ the \textit{radius of convergence}. For part (a), we say the radius of convergence is $0$ and, for part (b), we say the radius of convergence is $\infty$.
+
+To find the interval of convergence and/or the radius of convergence, we typically start with the \textit{Ratio Test for Absolute Convergence}. It will tell us if we are in part (a), (b), or (c) and, if we are in (c), then it will also give us $R$. The only thing it won't give in part (c), is whether or not the interval of convergence includes the endpoints. Let's look at some examples.
+
+\subsection*{Example 1}
+Find the interval of convergence and the radius of convergence for the power series
+\[
+\sum_{k=0}^{\infty} \frac{1}{k!} x^k.
+\]
+Note: It's worth mentioning that this is the Maclaurin series for $f(x) = e^x$.
+
+First, let's use the Ratio Test for Absolute Convergence.
+\[
+\rho = \lim_{k \to \infty} \left| \frac{x^{k+1} / (k+1)!}{x^k / k!} \right| = \lim_{k \to \infty} \frac{|x|^{k+1} k!}{|x|^k (k+1)!} = \lim_{k \to \infty} \frac{|x|}{k+1} = 0 < 1
+\]
+for all values of $x$. This means, that for any value of $x$ we plug into the series, the series will converge absolutely. So, we are in part (b) of the theorem. Our interval of convergence is $(-\infty, \infty)$ and our radius of convergence is $R = \infty$.
+
+\subsection*{Example 2}
+Find the interval of convergence and the radius of convergence for the power series
+\[
+\sum_{k=0}^{\infty} k! x^k.
+\]
+Again, let's start with the Ratio Test for Absolute Convergence.
+\[
+\rho = \lim_{k \to \infty} \left| \frac{(k+1)! x^{k+1}}{k! x^k} \right| = \lim_{k \to \infty} (k+1) |x|
+\]
+and this limit will diverge for all values of $x$ except when $x = 0$ so in this case, we are in part (a) of the theorem. The interval of convergence is $\{0\}$ and the radius of convergence is $R = 0$.
+
+\subsection*{Example 3}
+Find the interval of convergence and the radius of convergence for the power series
+\[
+\sum_{k=0}^{\infty} \frac{1}{k} x^k.
+\]
+Let's start with the Ratio Test for Absolute Convergence.
+\[
+\rho = \lim_{k \to \infty} \left| \frac{x^{k+1} / (k+1)}{x^k / k} \right| = \lim_{k \to \infty} \frac{|x| k}{k+1} = |x|
+\]
+for all values of $x$. We know that when $\rho < 1$ the series converges absolutely and when $\rho > 1$ the series diverges. Here, we are in part (c) of the theorem. Since $\rho = |x|$, we know the series converges absolutely when $|x| < 1$ and it diverges when $|x| > 1$. So we know so far that the series converges for all real numbers in the interval $(-1, 1)$. This is not necessarily our interval of convergence though since the series could also converge when $x = -1$ and/or when $x = 1$. We have to check these individually.
+
+When $x = 1$, then the series becomes the harmonic series, which we know diverges so we do not want to include $x = 1$ in our interval of convergence.
+
+When $x = -1$, then the series becomes the alternating harmonic series, which we know converges so we do want to include $x = -1$. Therefore, our interval of convergence is $[-1, 1)$ and our radius of convergence is $R = 1$.
+
+In general, for a power series centered at $0$, we use the Ratio Test for Absolute Convergence to get
+\[
+\rho = \lim_{k \to \infty} \left| \frac{c_{k+1}}{c_k} \right| |x|
+\]
+and solving $\rho < 1$ we get
+\[
+\left| \frac{c_{k+1}}{c_k} \right| |x| < 1 \Rightarrow |x| < \left| \frac{c_k}{c_{k+1}} \right|
+\]
+so $R = \left| \frac{c_k}{c_{k+1}} \right|$. For a power series centered at $x_0$, the radius of convergence will be
+\[
+R = \left| \frac{c_k}{c_{k+1}} \right|
+\]
+and our interval of convergence will be $(x_0 - R, x_0 + R)$, $[x_0 - R, x_0 + R)$, $(x_0 - R, x_0 + R]$, or $[x_0 - R, x_0 + R]$ depending on whether the series converges or diverges at the endpoints.
+
+\end{document}
