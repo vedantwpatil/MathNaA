@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/vedantpatil/Library/CloudStorage/OneDrive-DrexelUniversity/Documents/CS/Drexel/Math/animations/syntax_tutorial/graphing/media/videos/axes_tutorial/2160p60/partial_movie_files/Graphing/1457378895_3125649050_223132457.mp4'
+file 'file:/Users/vedantpatil/Library/CloudStorage/OneDrive-DrexelUniversity/Documents/CS/Drexel/Math/animations/syntax_tutorial/graphing/media/videos/axes_tutorial/2160p60/partial_movie_files/Graphing/1993220219_1613415078_3680722336.mp4'
+file 'file:/Users/vedantpatil/Library/CloudStorage/OneDrive-DrexelUniversity/Documents/CS/Drexel/Math/animations/syntax_tutorial/graphing/media/videos/axes_tutorial/2160p60/partial_movie_files/Graphing/1993220219_2568367830_255378825.mp4'
+file 'file:/Users/vedantpatil/Library/CloudStorage/OneDrive-DrexelUniversity/Documents/CS/Drexel/Math/animations/syntax_tutorial/graphing/media/videos/axes_tutorial/2160p60/partial_movie_files/Graphing/1993220219_2715609158_2778440856.mp4'
