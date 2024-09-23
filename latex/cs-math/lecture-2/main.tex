@@ -1,0 +1,79 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Mathematics for Computer Science }
+\lhead{Vedant Patil}
+\cfoot{\thepage}
+
+% Title
+\title{Lecture Notes: Induction Proofs}
+\author{Vedant Patil}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+\begin{tcolorbox}[colback=yellow!10!white,colframe=yellow!50!black,title=Key Points]
+  \begin{itemize}
+    \item Key point 1
+    \item Key point 2
+    \item Key point 3
+  \end{itemize}
+\end{tcolorbox}
+
+\section{Detailed Notes}
+\subsection{Proof by Condtradiction}
+To prove that a proposition P is true, we assume that P is false, formally determined as Not P is True. then use that hypothesis to derive a falsehood or condtradiction. If \( \not \) P \( \Rightarrow \) F is true, the only way for this state ment to be true is if not P is false or otherwise if P is true.
+
+\subsection{Subtopic 2}
+Your notes for subtopic 2
+
+\section{Important Formulas/Theorems/Definitions}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Key Formula/Theorem]
+  State an important formula or theorem here
+\end{tcolorbox}
+
+\section{Examples}
+\begin{tcolorbox}
+\textbf{Proof that $\sqrt{2}$ is irrational}
+
+Assume, for the purpose of contradiction, that $\sqrt{2}$ is rational.
+
+\begin{enumerate}
+    \item If $\sqrt{2}$ is rational, then $\sqrt{2} = \frac{a}{b}$ for some integers $a$ and $b \neq 0$, with $\frac{a}{b}$ in lowest terms.
+    \item Squaring both sides: $2 = \frac{a^2}{b^2}$
+    \item Multiply both sides by $b^2$: $2b^2 = a^2$
+    \item Therefore, $a^2$ is even, which implies $a$ is even.
+    \item Let $a = 2k$ for some integer $k$.
+    \item Substituting: $2b^2 = (2k)^2 = 4k^2$
+    \item Simplifying: $b^2 = 2k^2$
+    \item Therefore, $b^2$ is even, which implies $b$ is even.
+    \item But if both $a$ and $b$ are even, the fraction $\frac{a}{b}$ is not in lowest terms.
+    \item This contradicts our initial assumption.
+    \item \( \rightthreetimes \)
+\end{enumerate}
+
+Therefore, $\sqrt{2}$ cannot be expressed as a ratio of integers and is thus irrational.
+\end{tcolorbox}
+
+\section{Questions/Topics for Further Study}
+\begin{itemize}
+  \item Question or topic for further study
+\end{itemize}
+
+\end{document}

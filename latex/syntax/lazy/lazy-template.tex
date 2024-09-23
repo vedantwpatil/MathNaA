@@ -1,0 +1,83 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.5pt} % Add this line to increase headheight
+\usepackage{bookmark} % Add this line to resolve the rerunfilecheck error
+
+% Custom commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Linear Algebra }
+\lhead{Vedant Patil}
+\cfoot{\thepage}
+
+% Title
+\title{Lecture Notes: RREF}
+\author{Vedant Patil}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+\begin{tcolorbox}[colback=yellow!10!white,colframe=yellow!50!black,title=Key Points]
+  \begin{itemize}
+    \item Matrix reduction
+    \item Matrix simplification
+    \item what is RREF
+  \end{itemize}
+\end{tcolorbox}
+
+\section{Detailed Notes}
+\subsection{RREF Definition}
+The definition of rref is row reduced echelon form, the most difficult thing about this is that you can easily mess up the row reduction while doing any one of the steps
+
+\subsection{RREF Caclculation}
+This is something which computers often do nowadays to simplify the procedure however we can still do it by following the major rules of matrix reduction.
+This enforces us to use only the major operations and whatever operation you do to one side of the matrix you have to do to the other.
+This isn't the difficult part however it is just remebering all the steps you took and ensuring that you aren't missing something simple.
+
+\section{Important Formulas/Theorems}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Key Formula/Theorem]
+  Row Reduction Theorem 
+  Gaussian Elimination : \(  \)
+  \[
+  \begin{bmatrix}
+    a & b & c \\ 
+    c  & d & e \\ 
+    f & g & h 
+  \end{bmatrix}
+  \begin{bmatrix}
+    a + 1 & b + 1  & c + 1 \\ 
+    c  & d & e \\ 
+    f & g & h 
+  \end{bmatrix}
+  \]
+\end{tcolorbox}
+
+\section{Examples}
+  \[
+    \begin{bmatrix}
+      a & b & c \\ 
+      c  & d & e \\
+    \end{bmatrix}
+  \]
+\section{Questions/Topics for Further Study}
+\begin{itemize}
+  \item Question or topic for further study
+\end{itemize}
+
+\end{document}
