@@ -1,0 +1,145 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{MATH 220}
+\lhead{Vedant Patil}
+\cfoot{\thepage}
+
+% Title
+\title{Lecture Notes: Logic}
+\author{Vedant Patil}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+\begin{tcolorbox}[colback=yellow!10!white,colframe=yellow!50!black,title=Key Points]
+  \begin{itemize}
+    \item Understanding and combining logic statements with other logical expressions 
+  \end{itemize}
+\end{tcolorbox}
+
+\section{Detailed Notes}
+\subsection{Logical Statements}
+A statement is a declarative statement assertion that is either true or false but not both (T, F \( \implies 1,0 \)) are called boolean values \\ 
+
+Example 
+
+\begin{itemize}
+  \item Number 4 is even (T) 
+  \item Number 7 is odd (T) 
+  \item number 5 is divisible by 3 (F) 
+\end{itemize}
+
+An open sentence is a statement that contains one or more verbs \\ 
+
+The range of possible value of these variables is called the domain of open sentence, often denoted by \( \mathbb{S} \)
+
+Number \( \mathbb{N} \) is even so we usually denote open sentences by \( p(x) : x \in \mathbb{S} \)
+
+\subsection{Combining Statements}
+\subsubsection{Negation}
+Negation: given a statement \( P \) it's negation "Not \( P \)" is denoted by \( \neg P \) \\ 
+Example 
+\begin{itemize}
+  \item Number 4 is not even 
+  \item Number 4 is odd 
+\end{itemize}
+
+This is a more concrete example 
+\vspace{8pt}
+Establishing knowledge 
+\begin{itemize}
+  \item \( P(N) \): Number n is odd, \( S = \{1,2,3,4\}   \)
+  \item \( \neg P(N) \): number n is even, \( S = \{1,2,3,4\}   \)
+\end{itemize}
+
+\begin{itemize}
+  \item  \( \neg P(1): F \)
+  \item  \( \neg P(2): T \)
+  \item  \( \neg P(3): F \)
+  \item  \( \neg P(4): T \)
+\end{itemize}
+
+\subsubsection{Disjunction}
+Given statements P, Q their disjunction, denoted by \( P \lor Q \) is a statement P or Q
+
+Example)
+\vspace{12pt}
+\begin{itemize}
+  \item P: I am going to be at a bar tonight 
+  \item Q: I am going to the movies tonight 
+\end{itemize}
+
+\vspace{12pt}
+
+Truth Table 
+
+\begin{tabular}{|c|c|}
+\hline
+p & q \\
+\hline
+T & T \\
+T & F \\
+F & T \\
+F & F \\
+\hline
+\end{tabular}
+
+\subsubsection{Conjucntion}
+Given statements \( P,Q \) their conjunction denoted by \( P \land Q\) is the statement P and Q and is true only when the both of them are true 
+
+\section{Important Formulas/Theorems/Definitions}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Key Formula/Theorem]
+  State an important formula or theorem here
+\end{tcolorbox}
+
+\section{Examples}
+\begin{tcolorbox}
+  Example 1: 
+  \begin{equation}
+    P(N): \text{number n is odd,} s = \{1,2,3,4\}  
+  \end{equation}
+  \begin{itemize}
+    \item \( P(1): T \)
+    \item \( P(2): F \)
+    \item \( P(3): T \)
+    \item \( P(4): F \)
+  \end{itemize}
+
+  Example 2: 
+  \begin{equation}
+    P(x,y) \text{ is divisible by } x + y
+  \end{equation}
+  \begin{equation}
+    S = \{a,b\}  a \in \{1,2,3\}, b \in \{1,2\}  \\
+  \end{equation}
+  \begin{itemize}
+    \item P(1,1) = 1 * 1 \text{is } -1 -1 -1 + 1 \text{ this statement is false } 
+    \item P(1,2) = 1 * 2 \text{is } -1 -1 -1 + 1 \text{ this statement is false } 
+    \item P(2,1) \text{ this statement is false } 
+  \end{itemize}
+
+\end{tcolorbox}
+
+\section{Questions/Topics for Further Study}
+\begin{itemize}
+  \item Question or topic for further study
+\end{itemize}
+
+\end{document}

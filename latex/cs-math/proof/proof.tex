@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\begin{document}
+
+\section{A Proof in Propositional Logic}
+
+\begin{theorem}
+If $p \implies q$ and $q \implies r$, then $p \implies r$.
+\end{theorem}
+
+\begin{proof}
+We will prove this theorem using the following steps:
+
+\begin{enumerate}
+    \item $p \implies q$ (Given)
+    \item $q \implies r$ (Given)
+    \item $p$ (Assumption)
+    \item $q$ (Modus Ponens, 1 and 3)
+    \item $r$ (Modus Ponens, 2 and 4)
+\end{enumerate}
+
+From steps 3-5, we have shown that assuming $p$ leads to $r$. Therefore, by the definition of implication:
+
+\[
+p \implies r
+\]
+
+This completes the proof.
+\end{proof}
+
+\begin{lemma}
+$\neg(p \land q) \iff (\neg p \lor \neg q)$
+\end{lemma}
+
+\begin{proof}
+We will prove this equivalence using a truth table:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \land q$ & $\neg(p \land q)$ & $\neg p$ & $\neg q$ & $\neg p \lor \neg q$ \\
+\hline
+T & T & T & F & F & F & F \\
+T & F & F & T & F & T & T \\
+F & T & F & T & T & F & T \\
+F & F & F & T & T & T & T \\
+\hline
+\end{tabular}
+\end{center}
+
+As we can see, the truth values for $\neg(p \land q)$ and $(\neg p \lor \neg q)$ are identical for all possible combinations of $p$ and $q$. Therefore, these expressions are logically equivalent.
+\end{proof}
+
+\begin{theorem}
+If $p \implies (q \implies r)$, then $(p \land q) \implies r$.
+\end{theorem}
+
+\begin{proof}
+We will prove this using natural deduction:
+
+\begin{enumerate}
+    \item $p \implies (q \implies r)$ (Given)
+    \item $p \land q$ (Assumption)
+    \item $p$ (Conjunction Elimination, 2)
+    \item $q \implies r$ (Modus Ponens, 1 and 3)
+    \item $q$ (Conjunction Elimination, 2)
+    \item $r$ (Modus Ponens, 4 and 5)
+\end{enumerate}
+
+From steps 2-6, we have shown that assuming $p \land q$ leads to $r$. Therefore, by the definition of implication:
+
+\[
+(p \land q) \implies r
+\]
+
+This completes the proof.
+\end{proof}
+
+\end{document}

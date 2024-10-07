@@ -1,0 +1,92 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{MATH 311}
+\lhead{Vedant Patil}
+\cfoot{\thepage}
+
+% Title
+\title{Lecture Notes: Section 2.6: Tools for Counting Sample Points}
+\author{Vedant Patil}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+\begin{tcolorbox}[colback=yellow!10!white,colframe=yellow!50!black,title=Key Points]
+  \begin{itemize}
+    \item Being able to calculate the amount of possibilities given specific information about things like does the order matter and other relevant selection information 
+  \end{itemize}
+\end{tcolorbox}
+
+\section{Detailed Notes}
+\subsection{Theorem 2.1}
+This section will just hold a number of examples demonstrating the theorem 
+\vspace{12pt}
+Shapes and colors \\ 
+Square, Circle and triangle in red, yellow, blue, purple with one object of every color there are 12 possibilities because \( 3 * 4 \)
+
+\vspace{12pt} 
+Toss 2 6 sided dice, how many possible outcomes are there. \\ 
+\begin{itemize}
+  \item 6 for the first die 
+  \item 6 for the second die 
+  \item 36 total possible outcomes 
+\end{itemize}
+
+\vspace{12pt}
+List the birthdays for a group of 20 people. Assume no leap years 
+\begin{itemize}
+  \item \( 365^{20} \) possibilities
+\end{itemize}
+
+Assume all birthdays are equally likely, what is the probability that all 20 people have different birthdays \\
+\vspace{12pt}
+
+\( 365 * 364 * 363\ldots 346 \) this is how many sample points there are in which everyone has their own unique birthday 
+\begin{itemize}
+  \item \( \implies  \) The probability is \( \frac{365\ldots 346}{365^{20}} \)
+  \item \( = \frac{365}{365} * \frac{364}{365} \ldots \frac{346}{365} \)
+\end{itemize}
+
+Definition: An ordered arrangement of \( r \) distinct objects is called a permutation. The number of ways of ordering \( n \) distinct objects, taking r at a time is \( P^{n}_{r} \)
+
+Example: The names of 3 employes of a company of 30 will be drawn at random sequntially. The first picked gets 100 dollars, second gets 50 and the third gets 25 
+\begin{equation}
+  P^{30}_{3} = 30 * 29 * 28  = \frac{30!}{27!}
+\end{equation}
+
+\section{Important Formulas/Theorems/Definitions}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Key Formula/Theorem]
+  \begin{itemize}
+    \item Theorem 2.1: With M elements \( a_{1},a_{2},a_{3} \ldots a_{m} \) and \( n  \) elements \( b_{1},b_{2},b_{3} \ldots b_{n} \) it is possible to form \( mn  \) pairs with one element from each group 
+    \item Definition: An ordered arrangement of \( r \) distinct objects is called a permutation. The number of ways of ordering \( n \) distinct objects, taking r at a time is \( P^{n}_{r} \)
+  \end{itemize}
+\end{tcolorbox}
+
+\section{Examples}
+\begin{tcolorbox}
+  Write an example here
+\end{tcolorbox}
+
+\section{Questions/Topics for Further Study}
+\begin{itemize}
+  \item Question or topic for further study
+\end{itemize}
+
+\end{document}

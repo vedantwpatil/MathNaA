@@ -1,0 +1,118 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{MATH 220}
+\lhead{Vedant Patil}
+\cfoot{\thepage}
+
+% Title
+\title{Lecture Notes: Implies and Biconditional}
+\author{Vedant Patil}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+\begin{tcolorbox}[colback=yellow!10!white,colframe=yellow!50!black,title=Key Points]
+  \begin{itemize}
+    \item Understanding the implies operator and its truth table
+    \item Understanding the biconditional operator and how to use it
+  \end{itemize}
+\end{tcolorbox}
+
+\section{Detailed Notes}
+\subsection{Implies}
+For propositions \(P\) and \(Q\), the implication is denoted by \(P \implies Q\) and read as "if P then Q".
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+P & Q & P \rightarrow Q \\
+\hline
+T & T & T \\
+T & F & F \\
+F & T & T \\
+F & F & T \\
+\hline
+\end{tabular}
+\end{center}
+
+The important conclusion is that when P is true, Q cannot be false for the implication to be true.
+
+Example: If 3 is even then \(3 * 15\) is even 
+\begin{itemize}
+  \item \(P_1 = \text{"3 is even"}\)
+  \item \(Q_1 = \text{"3 * 15 is even"}\)
+  \item \(P_1 \implies Q_1\) is true 
+\end{itemize}
+
+P is false, so we can make any conclusion we want (the implication is vacuously true).
+
+\subsection{Biconditional}
+The biconditional operator, denoted by \(\leftrightarrow\) or \(\iff\), is read as "if and only if" (often abbreviated as "iff").
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+P & Q & P \leftrightarrow Q \\
+\hline
+T & T & T \\
+T & F & F \\
+F & T & F \\
+F & F & T \\
+\hline
+\end{tabular}
+\end{center}
+
+The biconditional is true when both P and Q have the same truth value.
+
+Properties of the biconditional:
+\begin{itemize}
+  \item Symmetry: \(P \leftrightarrow Q\) is equivalent to \(Q \leftrightarrow P\)
+  \item \(P \leftrightarrow Q\) is equivalent to \((P \implies Q) \land (Q \implies P)\)
+\end{itemize}
+
+Example: \(x^2 = 4 \iff x = \pm 2\)
+This statement is true because:
+\begin{itemize}
+  \item If \(x^2 = 4\), then \(x = \pm 2\)
+  \item If \(x = \pm 2\), then \(x^2 = 4\)
+\end{itemize}
+
+\section{Important Formulas/Theorems/Definitions}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Key Formula/Theorem]
+  \(P \leftrightarrow Q \equiv (P \implies Q) \land (Q \implies P)\)
+\end{tcolorbox}
+
+\section{Examples}
+\begin{tcolorbox}
+Demonstrating Implies and Biconditional
+\begin{itemize}
+  \item P(x): \(x^2 = 16\)
+  \item Q(x): \(|x| = 4\)
+  \item \(P(x) \implies Q(x)\) is true for all x
+  \item \(P(x) \leftrightarrow Q(x)\) is true for all real x
+\end{itemize}
+\end{tcolorbox}
+
+\section{Questions/Topics for Further Study}
+\begin{itemize}
+  \item How does the biconditional relate to logical equivalence?
+  \item Explore the use of biconditionals in mathematical definitions and theorems.
+\end{itemize}
+
+\end{document}

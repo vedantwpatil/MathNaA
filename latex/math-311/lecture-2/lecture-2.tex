@@ -1,0 +1,117 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{MATH 311}
+\lhead{Vedant Patil}
+\cfoot{\thepage}
+
+% Title
+\title{Lecture Notes: Section 2.4}
+\author{Vedant Patil}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+\begin{tcolorbox}[colback=yellow!10!white,colframe=yellow!50!black,title=Key Points]
+  \begin{itemize}
+    \item Key point 3
+  \end{itemize}
+\end{tcolorbox}
+
+\section{Detailed Notes}
+\subsection{Subtopic 1}
+When an experiament is performed there are a number of possible outcomes which may occur, we call those events.  \\ 
+For example say you toss a coin twice, these are some of the possible events 
+\begin{itemize}
+  \item A - Get the same on both flips 
+  \item B - Different on the 2 flips 
+  \item C - First flip is H 
+  \item D - First flip is T 
+  \item F - Second flip is H 
+  \item G - Second flip is T 
+  \item H - Don't get TH 
+\end{itemize}
+There is a difference between those events and these, we denote them with the letter E for special cases  \\
+\begin{itemize}
+  \item \( E_{1} \)- HH 
+  \item \( E_{2} \)- HT 
+  \item \( E_{3} \)- TH 
+  \item \( E_{4} \) - TT 
+\end{itemize}
+
+The sample space associated with a experiament is associated with all possible sample points \\ 
+
+The sample space will be Denoate by \( \mathbb{S} \) similar to the universal set 
+
+\begin{equation}
+  S = \{HH, HT, TH, TT\} 
+\end{equation}
+
+An event in discrete sample space \( \mathbb{S} \) is a collection of sample poitns that is a subset of \( \mathbb{S} \)
+
+For the events described previously, we have 
+
+\begin{equation}
+\begin{aligned}
+A &= \{HH, TT\} \\
+B &= \{HT, TH\} \\
+C &= \{HH, HT\} \\
+D &= \{TH, TT\} \\
+F &= \{HH, TH\} \\
+G &= \{HT, TT\} \\
+H &= \{HH, HT, TT\} \\
+E_{1} &= \{HH\} \\
+E_{2} &= \{HT\} \\
+E_{3} &= \{TH\} \\
+E_{4} &= \{TT\}
+\end{aligned}
+\end{equation}
+
+Now we will talk about probablity associated with events 
+
+\subsection{Subtopic 2}
+Your notes for subtopic 2
+
+\section{Important Formulas/Theorems/Definitions}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Key Formula/Theorem]
+  \begin{itemize}
+    \item The discrete case is a probalistic model for an experiament
+    \item Definition: An experiament is the proccess by which an observation is made 
+      \begin{itemize}
+        \item Tossing a coin or dye a number of times 
+        \item Measuring the height of a group of people 
+        \item Counting the number of bacteria in a certain sample 
+      \end{itemize}
+    \item Definition: A simple event is a event which cannot be decomposed. Each simple event corresponds to one and only one sample point. The letter E wwith a subscript is used to denote a single simple event/sample point.
+    \item Definition: A discrete sample space is ore that contains either a finite or a countable number of distinct sample points 
+    \item Suppose \( \mathbb{S} \) is a sample space associated with a expierament. To every event, \( A \) in \( \mathbb{S} \) (for every \( A \subsetneqq S \)) We assign a number, P(A) the probablity of A, so the following Axioms hold 
+      \begin{itemize}
+        \item Axiom 1: \( P(A) \geq 0 \text{ for all } A \subsetneqq S \)
+        \item Axiom 2: \( P(S) = 1 \)
+        \item Axiom 3: If \( A_{1}, A_{2} \text{are pairwise mutually exclusive } \)
+      \end{itemize}
+  \end{itemize}
+\end{tcolorbox}
+
+\section{Questions/Topics for Further Study}
+\begin{itemize}
+  \item Question or topic for further study
+\end{itemize}
+
+\end{document}
